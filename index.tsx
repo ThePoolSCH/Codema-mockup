@@ -1,6 +1,6 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom'; // 1. Importar HashRouter
 import App from './App';
 
 const rootElement = document.getElementById('root');
@@ -11,6 +11,9 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <App />
+    {/* 2. Envolver App con HashRouter */}
+    <HashRouter>
+      <App />
+    </HashRouter>
   </React.StrictMode>
 );
